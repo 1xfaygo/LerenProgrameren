@@ -1,10 +1,10 @@
 import random
 
-kleur =("oranje","blauwe","groene","bruine")
+kleur =("oranje","blauwe","groene","bruine","paars")
 zak =[]
-zakvraag = input("hoeveel m&m's moeten er in de zak:")
-for x in zakvraag:
-    random = random.randint(0,3)
-    zak.append(kleur[random])
-
-print(f"in de zak zit {zakvraag} {zak} m&m in ")
+zakvraag = int(input("hoeveel m&m's moeten er in de zak:"))
+for x in range(zakvraag):
+    keuze = random.choice(kleur)
+    zak.append(keuze)
+print(f"in de zak zitten de volgende m&ms in: ")
+print(zak)

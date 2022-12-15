@@ -1,24 +1,20 @@
-import random
-
-
 boodschappenlist = {}
 
-teller = 1
 
 while True:
-    itemvraag = input("Voeg een item toe:")
-    if itemvraag in boodschappenlist:
-        boodschappenlist[itemvraag] +=1 
+    item_vraag = input("Voeg een item toe:")
+    aantal = int(input("hoveel wil je ?:"))
+    if item_vraag in boodschappenlist:
+        boodschappenlist[item_vraag] += aantal
     else:
-        boodschappenlist.update({itemvraag : teller})
-    tweedeitemvraag = input("meer toevoegen")
-    if tweedeitemvraag != "ja":
+        boodschappenlist.update({item_vraag : aantal})
+    tweede_item_vraag = input("meer toevoegen")
+    if tweede_item_vraag != "ja":
         break
     
-print("-[boodschappenlijst]-")
+print("-[BOODSCHAPPENLIJST]-")
 
 for key,value in boodschappenlist.items():
-    print(f"{value} : {key}")
+    print(f"{key} : {value}")
 
 print("----------------------") 
-
