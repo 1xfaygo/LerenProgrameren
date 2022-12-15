@@ -7,7 +7,7 @@ aantalM_en_Ms = 1 #dit doe ik omdat ik niet geen range gebruik dus maak ik een t
 for x in range(inhoudsvraag):
     keuzekleur = random.choice(lijst_kleur)
     if keuzekleur not in zak_dict:
-        zak_dict.update({keuzekleur:teller})
+        zak_dict.update({keuzekleur:aantalM_en_Ms})
     else:
         zak_dict[keuzekleur] +=1
 
