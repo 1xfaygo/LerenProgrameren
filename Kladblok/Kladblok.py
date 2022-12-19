@@ -65,37 +65,37 @@
 
 # programma wat om namen vraagt, om leeftijden vraagt
 # dit opslaat in een dict vervolgens de hoogste leeftijd print. 
-mijn_namen_dict = {}
+# mijn_namen_dict = {}
 
-while True:
-    naam = input("wat is je naam? (stop om te stoppen)")
+# while True:
+#     naam = input("wat is je naam? (stop om te stoppen)")
 
-    if naam == "stop":
-        break
-    # controle of naam er in zit
-    if naam in mijn_namen_dict:
-        if input("wilt uw bijwerken? (ja/nee)") != "ja":
-            continue
-    leeftijd = int(input("Wat is je leeftijd:"))
+#     if naam == "stop":
+#         break
+#     # controle of naam er in zit
+#     if naam in mijn_namen_dict:
+#         if input("wilt uw bijwerken? (ja/nee)") != "ja":
+#             continue
+#     leeftijd = int(input("Wat is je leeftijd:"))
 
-    # controle of iemand met de zelfde leeftijd in zit
-    if leeftijd in mijn_namen_dict.values():
-        for n,l in mijn_namen_dict.items():
-            if l == leeftijd:
-                break 
-        print(f"{n}is al zo oud")
-        if input("toch doorgaan? ja/nee") != "ja":
-            continue
+#     # controle of iemand met de zelfde leeftijd in zit
+#     if leeftijd in mijn_namen_dict.values():
+#         for n,l in mijn_namen_dict.items():
+#             if l == leeftijd:
+#                 break 
+#         print(f"{n}is al zo oud")
+#         if input("toch doorgaan? ja/nee") != "ja":
+#             continue
 
-    # update of mijwerken van dictionary
-    # mijn_namen_dict[naam] = leeftijd
-    mijn_namen_dict.update({naam : leeftijd})
+#     # update of mijwerken van dictionary
+#     # mijn_namen_dict[naam] = leeftijd
+#     mijn_namen_dict.update({naam : leeftijd})
 
-print(mijn_namen_dict)
-leeftijd_lijst = list(mijn_namen_dict.values())
-namen_lijst = list(mijn_namen_dict.keys()) 
-print(f"de leeftijd van iedereen {leeftijd_lijst}")
-print(f"de oudeste persoon is :{namen_lijst[leeftijd_lijst.index(max(leeftijd_lijst))]}")
+# print(mijn_namen_dict)
+# leeftijd_lijst = list(mijn_namen_dict.values())
+# namen_lijst = list(mijn_namen_dict.keys()) 
+# print(f"de leeftijd van iedereen {leeftijd_lijst}")
+# print(f"de oudeste persoon is :{namen_lijst[leeftijd_lijst.index(max(leeftijd_lijst))]}")
 
 
 
@@ -136,3 +136,89 @@ print(f"de oudeste persoon is :{namen_lijst[leeftijd_lijst.index(max(leeftijd_li
 # mijn_list = [1]
 
 # print(dir(mijn_list))
+
+
+
+
+
+
+
+
+
+
+
+
+# de functie vraagt aan de gebruiker en geeft deze terug
+# def vraag_een_getal(vraag: str) -> int: # betekend defineer = maak aan
+#     while True:
+#         try:
+#             leeftijd = int(input(vraag))
+#             break
+#         except ValueError:
+#             print("je moet wel een getal invoeren")
+#             continue
+#     return leeftijd
+
+
+
+
+# leeftijd = vraag_een_getal("voer leeftijd in:")
+
+#functie die teruggeeft: "hallo naam" 
+# def naam_stellen(vraag: str) -> str:
+#     naam = input(antwoord)
+#     return naam
+# antwoord = naam_stellen("voer je naam")#functieaanroep
+
+
+
+
+
+
+
+
+
+
+
+
+def geeft_naam_met_hallo(n: str)-> str:
+    zin = f"hallo {n}"
+    return zin
+
+antwoord = geeft_naam_met_hallo("yassine")
+print(antwoord)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# geboorte_jaar = vraag_een_getal("voer geboorte jaar in:")
+# geboorte_maand = vraag_een_getal("voer geboorte maand in:")
+# geboorte_dag =vraag_een_getal("voer geboorte dag in:")
+
+# print(leeftijd)
+
+
+
+
+
+
+
+
+
