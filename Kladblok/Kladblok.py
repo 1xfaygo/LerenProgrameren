@@ -181,18 +181,42 @@
 
 
 
-def geeft_naam_met_hallo(n: str)-> str:
-    zin = f"hallo {n}"
-    return zin
+# def geeft_naam_met_hallo(n: str)-> str:
+#     zin = f"hallo {n}"
+#     return zin
 
-antwoord = geeft_naam_met_hallo("yassine")
-print(antwoord)
-
-
+# antwoord = geeft_naam_met_hallo("yassine")
+# print(antwoord)
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def vraag_om_letter(vraag:str) -> str:
+    while True:
+        leter = input(vraag)
+        if len(leter) > 1:
+            print("je moet wel een leter invoeren")
+        else:
+            return leter
+print(vraag_om_letter('voer een letter in:'))
 
 
 
