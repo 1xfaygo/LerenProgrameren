@@ -2,4 +2,6 @@ from fruitmand import fruitmand
 
 
 
-print(fruitmand[1]['weight'])
+for x in fruitmand:
+    if x['name'] == 'appel':
+        print(x['weight'])
