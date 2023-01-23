@@ -209,14 +209,14 @@
 
 
 
-def vraag_om_letter(vraag:str) -> str:
-    while True:
-        leter = input(vraag)
-        if len(leter) > 1:
-            print("je moet wel een leter invoeren")
-        else:
-            return leter
-print(vraag_om_letter('voer een letter in:'))
+# def vraag_om_letter(vraag:str) -> str:
+#     while True:
+#         leter = input(vraag)
+#         if len(leter) > 1:
+#             print("je moet wel een leter invoeren")
+#         else:
+#             return leter
+# print(vraag_om_letter('voer een letter in:'))
 
 
 
@@ -241,6 +241,21 @@ print(vraag_om_letter('voer een letter in:'))
 
 
 
+# begint met 5 vermingvuldig met 3 tot 1000 is bereikt
+def keer_drie(getal: int, max:int) ->int:
+    if getal>=max:
+        return getal
+    else:
+        getal *= 3
+        return keer_drie(getal, max)
+
+
+
+
+
+# 15
+# 45
+# 135
 
 
 
