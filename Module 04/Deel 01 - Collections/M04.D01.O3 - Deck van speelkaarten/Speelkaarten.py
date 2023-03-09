@@ -15,7 +15,7 @@ random.shuffle(dek)
 
 for b in range(1,8):
     jouw_kaarten = random.choice(dek)
-    print(f"kaart {b}{jouw_kaarten}")
+    print(f"kaart {b} {jouw_kaarten}")
     dek.remove(jouw_kaarten)
 
 print(f"de rest van de {len(dek)} kaarten zijn {dek}:")
