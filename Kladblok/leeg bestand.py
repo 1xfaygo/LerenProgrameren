@@ -27,17 +27,18 @@ Game_won_teller +=1
 # nog mee bezig
 ########################################################
 #hoe de functie er ongeveer uit gaan zien
-while True:
-    try:
-        lis = [2]
-        invoer= int(input('voer een getal in'))
-        if invoer in lis:
-            print('test complete')
-            break
-        else:
-            print('test failed')
-    except ValueError:
-        print("een getal!")
+def test():
+    while True:
+        try:
+            lis = [2]
+            invoer= int(input('voer een getal in'))
+            if invoer in lis:
+                print('test complete')
+                break
+            else:
+                print('test failed')
+        except ValueError:
+            print("een getal!")
 ########################################################
 #functie die vraagt of je elke keer opnieuw wilt spelen
 def retry():
