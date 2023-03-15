@@ -1,0 +1,3 @@
+python game maken 
+html cjv 
+javascript horeca app

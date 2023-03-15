@@ -1,0 +1,3 @@
+Ik ga vandaag van module 5 deel 1 de game retry afmaken.
+----------------------------------------------------------
+En ga proberen een functie maken voor de inlog page om de positie en de naam op te vragen.
