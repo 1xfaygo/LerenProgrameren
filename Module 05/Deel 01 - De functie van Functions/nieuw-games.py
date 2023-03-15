@@ -83,3 +83,5 @@ while True:
             print("kies uit de gegeven opties")
     except ValueError:
         print("voer een getal in ")
+print("")
+print("je loopt de kamer uit en hebt ")
