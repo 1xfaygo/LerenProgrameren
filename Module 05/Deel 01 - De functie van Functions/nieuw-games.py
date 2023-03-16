@@ -1,6 +1,18 @@
 import time
 inventory = []
 items = {}
+def opnieuw():
+    while True:
+        try:
+            keuze_6 = int(input("(1)ja of (2)nee"))
+            if keuze_6 == 1:
+                time.sleep(2)
+                print("je wordt opnieuw geladen")
+                break
+            else:
+                print("kies uit de gegeven opties")
+        except ValueError:
+            print("voer een getal in ")
 print("----------------------")
 print("-----PRISON-ESCAPE----")
 print("----------------------")
@@ -34,10 +46,10 @@ time.sleep(2)
 print("Wat doe je nu")
 while True:
     try:
-        keuze_1 = int(input("(1) blijf je onder het bed liggen of (2)waag je een poging om te ontsnappen"))
+        keuze_2 = int(input("(1) blijf je onder het bed liggen of (2)waag je een poging om te ontsnappen"))
         time.sleep(2)
-        if keuze_1 == 1:
-            time.sleep(2)
+        if keuze_2 == 1:
+            time.sleep(3)
             print("De leider comandeerd alle anderen mannen om te gaan zoeken naar jou dus verlaten ze allemaal de binnenplaats om jou te zoeken")
             break
         else:
@@ -56,9 +68,9 @@ print("je loopt dor de gang heen en komt langs de bewakings kamer en vind daar 2
 print("")
 while True:
     try:
-        keuze_1 = int(input("(1) ga je de beveilegings kamer in  of (2)loop je door"))
+        keuze_3 = int(input("(1) ga je de beveilegings kamer in  of (2)loop je door"))
         time.sleep(2)
-        if keuze_1 == 1:
+        if keuze_3 == 1:
             time.sleep(2)
             print("je loopt de beveilegings kamer in en checkt beide lichamen om te checken of ze iets bij hun hadden en 1 van de 2 beveiligers had een wapen op zich")
             break
@@ -69,9 +81,9 @@ while True:
 print("")
 while True:
     try:
-        keuze_1 = int(input("(1) pak je het wapen op  of (2) laat je hem liggen en loopt de kamer uit "))
+        keuze_4 = int(input("(1) pak je het wapen op  of (2) laat je hem liggen en loopt de kamer uit "))
         time.sleep(2)
-        if keuze_1 == 1:
+        if keuze_4 == 1:
             time.sleep(2)
             print("je hebt de wapen opgepakt en en in je broekzak gedaan")
             items['wapon'] = "Glock 12"
@@ -84,4 +96,31 @@ while True:
     except ValueError:
         print("voer een getal in ")
 print("")
-print("je loopt de kamer uit en hebt ")
+print("je loopt de kamer uit en loopt langs de donkere gangen wat dood loopt met een deur aan je rechter kant ")
+print("")
+print("je komt bij een deur aan en je hoort een stem vanuit de deur")
+print("")
+time.sleep(2)
+print("je hoort een stem zeggen: 'je hebt geen keuze je moet de deur openen'")
+print("")
+time.sleep(2)
+while True:
+    try:
+        keuze_5 = int(input("(1)doe je de deur open of (2)loop je langzaam van de deur vandaan"))
+        if keuze_5 == 1:
+            time.sleep(2)
+            print("je doet de deur open en er komt een man met een mes op je af en hij steekt je neer")
+            break
+        else:
+            print("kies uit de gegeven opties")
+    except ValueError:
+        print("voer een getal in ")
+print("")
+print("je bent dood")
+print("")  
+time.sleep(2)
+print("GAME OVER")
+print("")
+time.sleep(2)
+print("Wil je opnieuw spelen")
+opnieuw()
