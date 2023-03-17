@@ -1,0 +1,2 @@
+pyhton game-rework
+cv en solicitatie brief maken
