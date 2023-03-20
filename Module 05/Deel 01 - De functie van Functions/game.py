@@ -30,3 +30,5 @@ def game(scenario):
 
 game(vragen[0])
 
+
+
