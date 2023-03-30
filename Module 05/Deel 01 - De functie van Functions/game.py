@@ -1,3 +1,4 @@
+# recusrie van senarios weghalen en return toevoegen 
 vragen = [{
     'vraag1': "(1) blijf je onder het bed liggen of (2)waag je een poging om te ontsnappen: ",
     'vraag2': "(1)ga je de beveilegings kamer in  of (2)loop je door: ",

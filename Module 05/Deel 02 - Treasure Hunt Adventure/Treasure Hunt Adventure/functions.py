@@ -1,22 +1,31 @@
 import time
 from termcolor import colored
 from data import JOURNEY_IN_DAYS
-
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
+    koper = amount/10
+    return float(koper)
     pass
 
 def silver2gold(amount:int) -> float:
+    silver = amount/5
+    return float(silver)
     pass
 
 def copper2gold(amount:int) -> float:
+    koper = amount/10/5
+    return float(koper)
     pass
 
 def platinum2gold(amount:int) -> float:
+    platinum = amount*25
+    return float(platinum)
     pass
 
 def getPersonCashInGold(personCash:dict) -> float:
+    personCash = platinum2gold,copper2gold,silver2gold,copper2silver
+    return personCash
     pass
 
 ##################### M04.D02.O4 #####################
