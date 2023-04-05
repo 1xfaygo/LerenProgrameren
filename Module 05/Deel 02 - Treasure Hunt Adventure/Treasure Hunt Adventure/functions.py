@@ -4,8 +4,8 @@ from data import JOURNEY_IN_DAYS
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
-    koper = amount/10
-    return float(koper)
+    copper = amount/10
+    return float(copper)
     pass
 
 def silver2gold(amount:int) -> float:
@@ -14,8 +14,8 @@ def silver2gold(amount:int) -> float:
     pass
 
 def copper2gold(amount:int) -> float:
-    koper = amount/10/5
-    return float(koper)
+    copper = amount/10/5
+    return float(copper)
     pass
 
 def platinum2gold(amount:int) -> float:
@@ -24,7 +24,11 @@ def platinum2gold(amount:int) -> float:
     pass
 
 def getPersonCashInGold(personCash:dict) -> float:
-    personCash = platinum2gold,copper2gold,silver2gold,copper2silver
+    platinum = personCash['platinum'] * 25
+    gold = personCash['gold'] 
+    copper = personCash['copper']/10/5
+    silver = personCash['silver']/5
+    personCash = platinum + gold + copper +silver
     return personCash
     pass
 
