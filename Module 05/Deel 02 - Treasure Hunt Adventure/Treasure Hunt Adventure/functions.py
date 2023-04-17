@@ -1,27 +1,25 @@
 import time
 from termcolor import colored
 from data import JOURNEY_IN_DAYS
+from data import COST_FOOD_HUMAN_COPPER_PER_DAY
+from data import COST_FOOD_HORSE_COPPER_PER_DAY
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
     copper = amount/10
     return float(copper)
-    pass
 
 def silver2gold(amount:int) -> float:
     silver = amount/5
     return float(silver)
-    pass
 
 def copper2gold(amount:int) -> float:
-    copper = amount/10/5
+    copper = amount/50
     return float(copper)
-    pass
 
 def platinum2gold(amount:int) -> float:
     platinum = amount*25
     return float(platinum)
-    pass
 
 def getPersonCashInGold(personCash:dict) -> float:
     platinum = personCash['platinum'] * 25
@@ -30,26 +28,34 @@ def getPersonCashInGold(personCash:dict) -> float:
     silver = personCash['silver']/5
     personCash = platinum + gold + copper +silver
     return personCash
-    pass
 
 ##################### M04.D02.O4 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
+    cost_in_copper = (COST_FOOD_HORSE_COPPER_PER_DAY * horses + COST_FOOD_HUMAN_COPPER_PER_DAY * people) * JOURNEY_IN_DAYS
+    cost_in_gold = cost_in_copper/50
+    return cost_in_gold
     pass
 
 ##################### M04.D02.O5 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    lijstje = []
+    for x in list:
+        if key in lijstje and value in lijstje == value:
+            lijstje.append(x)
+    return lijstje
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    return getFromListByKeyIs(people,'adventuring',True)
+    
 
 def getShareWithFriends(friends:list) -> int:
-    pass
+    return getFromListByKeyIs(friends,'sharewith',True)
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    return getFromListByKeyIs(friends,'friends',True)
+
 
 ##################### M04.D02.O6 #####################
 
