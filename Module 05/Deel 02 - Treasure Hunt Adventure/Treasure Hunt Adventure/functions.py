@@ -3,6 +3,8 @@ from termcolor import colored
 from data import JOURNEY_IN_DAYS
 from data import COST_FOOD_HUMAN_COPPER_PER_DAY
 from data import COST_FOOD_HORSE_COPPER_PER_DAY
+from data import COST_HORSE_SILVER_PER_DAY
+from data import COST_TENT_GOLD_PER_WEEK
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
@@ -42,7 +44,7 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     lijstje = []
     for x in list:
-        if key in lijstje and value in lijstje == value:
+        if key in x and x[key] == value:
             lijstje.append(x)
     return lijstje
 
@@ -60,7 +62,8 @@ def getAdventuringFriends(friends:list) -> list:
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    paard = people * 2
+    return paard
 
 def getNumberOfTentsNeeded(people:int) -> int:
     pass
