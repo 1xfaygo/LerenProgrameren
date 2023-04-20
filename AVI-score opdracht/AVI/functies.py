@@ -41,7 +41,9 @@ def getNumberOfCharacters(text: str) -> int:
 # opdracht 2
 def getNumberOfSentences(text: str) -> int:
     aantal_zinnen = text.count('.')
-    return aantal_zinnen
+    aantal_zinnen2 = text.count('!')
+    aantal_zinnen3 = text.count('?')
+    return aantal_zinnen + aantal_zinnen2 + aantal_zinnen3
 
 # opdracht 3
 def getNumberOfWords(text: str) -> int:
