@@ -6,9 +6,11 @@ import tkinter.messagebox # if you want to send messages to the user.
 # functions
 def calculate():
     textToBeCalculated = calculateInput.get('1.0', 'end') # get all the text from inputfield
-    print(textToBeCalculated)
-    characterLabel.config(text=f"Zinnen: {getNumberOfCharacters(textToBeCalculated)}")
+    characterLabel.config(text=f"karakters: {getNumberOfCharacters(textToBeCalculated)}")
     sentencesLabel.config(text =f"Zinnen: {getNumberOfSentences(textToBeCalculated)}")
+    wordLabel.config(text =f"Woord(en): {getNumberOfWords(textToBeCalculated)}")
+    aviLabel.config(text =f"AVI-level: {avichecker(textToBeCalculated)}")
+
 
 
 #variables TK
@@ -19,11 +21,15 @@ calculateInput = tk.Text(root, width = 70, height = 30, background='lightgrey') 
 calculateButton = ttk.Button(root, text='Bereken score(s)', command=calculate)        # generate button when pressed -> calculate
 characterLabel = tk.Label(root, text=f'Karakters:', width=20, bg='black', fg='white') # generate characterLabel
 sentencesLabel = tk.Label(root, text=f'Zinnen:', width=20, bg='black', fg='white')    # generate sentencesLabel
+wordLabel = tk.Label(root, text=f'Woord(en):', width=20, bg='black', fg='white')    # generate sentencesLabel
+aviLabel = tk.Label(root, text=f'AVI-level:', width=12, bg='black', fg='white')    # generate sentencesLabel
 
 calculateInput.place(x=20, y=20)   # place is one of the ways to put elements on root (window).
 calculateButton.place(x=20, y=520)
 characterLabel.place(x=180, y=560)
-sentencesLabel.place(x=20, y=560)
+sentencesLabel.place(x=340, y=560)
+wordLabel.place(x=20, y=560)
+aviLabel.place(x=490, y=560)
 
 # start program
 root.mainloop() # runs until stopped with default stop button.

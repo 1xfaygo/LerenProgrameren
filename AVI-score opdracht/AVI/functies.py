@@ -47,3 +47,17 @@ def getNumberOfSentences(text: str) -> int:
 def getNumberOfWords(text: str) -> int:
     aantal_woorden = len(text.split())
     return aantal_woorden
+
+def avichecker(text: str) -> int:
+    if getNumberOfWords(text) <= 7:
+         return "5"
+    elif getNumberOfWords(text) == 8:
+        return "6"
+    elif getNumberOfWords(text) == 9:
+        return "7"
+    elif getNumberOfWords(text) == 10:
+        return "8"
+    elif getNumberOfWords(text) == 11:
+        return "11"
+    elif getNumberOfWords(text) > 11:
+        return "12"
