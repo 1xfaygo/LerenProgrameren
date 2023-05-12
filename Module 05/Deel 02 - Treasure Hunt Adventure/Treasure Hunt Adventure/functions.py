@@ -25,10 +25,10 @@ def platinum2gold(amount:int) -> float:
     return float(platinum)
 
 def getPersonCashInGold(personCash:dict) -> float:
-    platinum = personCash['platinum'] * 25
+    platinum = personCash['platinum'] * 25.0
     gold = personCash['gold'] 
-    copper = personCash['copper']/10/5
-    silver = personCash['silver']/5
+    copper = personCash['copper']/10.0/5.0
+    silver = personCash['silver']/5.0
     personCash = platinum + gold + copper +silver
     return personCash
 
@@ -74,11 +74,25 @@ def getTotalRentalCost(horses:int, tents:int) -> float:
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+    item_list = []
+    for item in items:
+        item_list.append(f"{item['amount']}{item['unit']} {item['name']}")
 
+    return ', '.join(item_list)
+        
 def getItemsValueInGold(items:list) -> float:
-    pass
-
+    totaal = 0
+    for item in items:
+        if item['price']['type'] == 'copper':
+            totaal += copper2gold( item['amount'] * item['price']['amount'])
+        elif item['price']['type'] == 'silver':
+            totaal += silver2gold( item['amount'] * item['price']['amount'])
+        elif item['price']['type'] == 'platinum':
+            totaal += platinum2gold( item['amount'] * item['price']['amount'])
+        else:
+            gold = item['amount'] * item['price']['amount']
+            totaal += gold
+    return totaal 
 ##################### M04.D02.O8 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
