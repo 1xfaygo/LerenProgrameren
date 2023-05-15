@@ -94,10 +94,8 @@ def getItemsValueInGold(items:list) -> float:
             totaal += gold
     return totaal 
 ##################### M04.D02.O8 #####################
-
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
-
+    return getCashInGoldFromPeople(people,['cash'],'gold')
 ##################### M04.D02.O9 #####################
 
 def getInterestingInvestors(investors:list) -> list:

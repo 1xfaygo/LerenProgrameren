@@ -45,7 +45,7 @@ friends = [{
     'cash' : {
         'platinum' : 0,
         'gold' : 2,
-        'silver' : 17,
+        'silver' : 17,  
         'copper' : 11
     }
 },{
