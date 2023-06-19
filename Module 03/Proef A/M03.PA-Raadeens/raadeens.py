@@ -3,7 +3,6 @@ score = 0
 ronde = 0
 while ronde <20 :
     te_raden_getal = random.randint(1,1000)
-    print(te_raden_getal)
     teller = 0
     while teller < 10:
         geraden_getal = int(input("Raad een getal tussen 1 en 1000:"))
