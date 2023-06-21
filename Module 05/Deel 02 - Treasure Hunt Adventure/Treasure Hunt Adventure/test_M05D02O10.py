@@ -25,7 +25,6 @@ if getMaxAmountOfNightsInInn(5, 2, 2) != 3:
     print_colorvars(vars=['Test 5 is False'], color='red')
 else:
     print_colorvars(vars=['Test 5 is correct'], color='green')
-
 if getJourneyInnCostsInGold(1,1,1) != 0.68:
     print_colorvars(vars=['Test 6 is False'], color='red')
 else:

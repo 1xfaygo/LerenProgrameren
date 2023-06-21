@@ -6,6 +6,8 @@ from data import COST_FOOD_HUMAN_COPPER_PER_DAY
 from data import COST_FOOD_HORSE_COPPER_PER_DAY
 from data import COST_HORSE_SILVER_PER_DAY
 from data import COST_TENT_GOLD_PER_WEEK
+from data import COST_INN_HORSE_COPPER_PER_NIGHT
+from data import COST_INN_HUMAN_SILVER_PER_NIGHT
 ##################### M04.D02.O2 #####################
 
 def copper2silver(amount:int) -> float:
@@ -123,18 +125,33 @@ def getTotalInvestorsCosts(investors:list, gear:list) -> float:
 ##################### M04.D02.O10 #####################
 
 def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
-    pass
+    mens = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT) * people
+    paard = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT) * horses
+    totaal = int(leftoverGold / (mens + paard))
+    return totaal
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
-    pass
-
+    gold = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT) 
+    mensen = gold * people
+    paard = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT)
+    paarden = paard * horses
+    totaal = round((mensen + paarden) * nightsInInn,2)
+    return totaal
 ##################### M04.D02.O12 #####################
 
 def getInvestorsCuts(profitGold:float, investors:list) -> list:
-    pass
+    lijst = []
+    for x in investors:
+        if x['profitReturn'] < 10:
+            lijst.append(round(x['profitReturn'] / 100 * profitGold,2))
+    return lijst
 
 def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> float:
-    pass
+    aantal = 0
+    for x in investorsCuts:
+        aantal += x
+    totaal = round((profitGold - aantal) / fellowship,2)
+    return totaal
 
 ##################### M04.D02.O13 #####################
 
